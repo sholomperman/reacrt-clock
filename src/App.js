@@ -6,7 +6,7 @@ function App() {
   const [hours, setHours] = useState();
   const [minute, setMinute] = useState();
   const [second, setSecond] = useState();
-  const [ampm, setAmpm] = useState('AM');
+  const [ampm, setAmpm] = useState('PM')
 
   useEffect(() => {
     setInterval(() => {
@@ -28,55 +28,7 @@ function App() {
     transform: `rotate(${second * 6}deg)`
   };
   
-  
-  switch (hours) {
-    case 13:
-      setHours(1);
-      break;
-    case 14:
-      setHours(2);
-      break;
-    case 15:
-      setHours(3);
-      break;
-    case 16:
-      setHours(4);
-      break;
-    case 17:
-      setHours(5);
-      break;
-    case 18:
-      setHours(6);
-      break;
-    case 19:
-      setHours(7);
-      break;
-    case 20:
-      setHours(8);
-      break;
-    case 21:
-      setHours(9);
-      break;
-    case 22:
-      setHours(10);
-      break;
-    case 23:
-      setHours(11);
-      break;
-    case 24:
-      setHours(12);
-      break;
-  }
-
-    if (hours > 12) {
-    setAmpm('PM')
-  }
-
-
-
-    
     return (
-      <>
   <div className="container">
     <div className="clock">
       <div className='middle'></div>
@@ -102,9 +54,7 @@ function App() {
         <div style={myStyleSecond} className="handContainerSecondes">
           <div className="secondes"></div>
         </div>
-    </div>
-        <h1 className='digital'>{`${hours} : ${minute} : ${second} ${ampm}`}</h1>
-  </>
+  </div>
   );
 }
 
