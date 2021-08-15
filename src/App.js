@@ -6,7 +6,6 @@ function App() {
   const [hours, setHours] = useState();
   const [minute, setMinute] = useState();
   const [second, setSecond] = useState();
-  // const [ampm, setAmpm] = useState('PM')
 
   useEffect(() => {
     setInterval(() => {
